@@ -29,6 +29,10 @@ public class UserService {
         return userRepo.findAllByNameContaining(name);
 
     }
+    public Optional<User> searchById(Long id)
+    {
+       return userRepo.findById(id);
+    }
 
 
     public User createUser(User user) {

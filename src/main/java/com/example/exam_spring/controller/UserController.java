@@ -24,10 +24,10 @@ public class UserController {
         return userService.getAllUser();
     }
 
-//    @GetMapping("/{id}")
-//    public User getUserById(@PathVariable("id") Long id) {
-//        return userService.getById(id);
-//    }
+    @GetMapping("/{id}")
+    public Optional<User> getUserById(@PathVariable("id") Long id) {
+        return userService.searchById(id);
+    }
 
     @GetMapping("/search")
     public List<User> getAllByName( String name) {

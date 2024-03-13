@@ -22,6 +22,8 @@ public class User {
     private String name;
     @Column(nullable = false)
     private int age;
+    @Column(nullable = false)
+
     private double salary;
 
 }
